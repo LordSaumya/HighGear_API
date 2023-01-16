@@ -14,7 +14,6 @@ gem "puma", "~> 5.0"
 
 gem 'sprockets-rails', '~> 3.2.2'
 
-gem 'rack-cors'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
