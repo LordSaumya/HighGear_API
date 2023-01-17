@@ -4,7 +4,9 @@ Comment.delete_all
 ForumThread.delete_all
 User.delete_all
 ActiveRecord::Base.connection_pool.with_connection do |conn|
-    conn.execute("TRUNCATE comments RESTART IDENTITY, forum_threads RESTART IDENTITY, comments RESTART IDENTITY")
+    conn.execute("TRUNCATE comments RESTART IDENTITY")
+    conn.execute("TRUNCATE forum_threads RESTART IDENTITY")
+    conn.execute("TRUNCATE users RESTART IDENTITY")
 end
 
 
