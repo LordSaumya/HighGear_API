@@ -72,37 +72,37 @@ ForumThread.create([
 Comment.create([
     {
         content: "This is a test comment by an admin. Notice the gold border as well as the badge.",
-        ForumThread_id: 1,
+        forumthread_id: 1,
         User_id: 1
     },
     {
         content: "<p class=\"ql-align-center\"><em>Comments </em>have <span style=\"color: rgb(255, 255, 0);\">rich </span>text <u>formatting </u>and <span style=\"color: rgb(61, 20, 102); background-color: rgb(250, 204, 204);\">images </span><span class=\"ql-size-huge\">too</span><span class=\"ql-size-huge\" style=\"background-color: rgb(102, 185, 102);\">!</span></p>",
-        ForumThread_id: 2,
+        forumthread_id: 2,
         User_id: 2
     },
     {
         content: "<p>This is a comment by another user.</p>",
-        ForumThread_id: 3,
+        forumthread_id: 3,
         User_id: 3
     },
     {
         content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>",
-        ForumThread_id: 3,
+        forumthread_id: 3,
         User_id: 4
     },
     {
         content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>",
-        ForumThread_id: 3,
+        forumthread_id: 3,
         User_id: 3
     },
     {
         content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>",
-        ForumThread_id: 2,
+        forumthread_id: 2,
         User_id: 1
     },
     {
         content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>",
-        ForumThread_id: 2,
+        forumthread_id: 2,
         User_id: 2
     }
 ]);
