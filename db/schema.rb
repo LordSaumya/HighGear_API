@@ -16,11 +16,11 @@ ActiveRecord::Schema[7.0].define(version: 0) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "User_id", null: false
-    t.integer "ForumThread_id", null: false
+    t.integer "forumthread_id", null: false
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ForumThread_id"], name: "index_comments_on_ForumThread_id"
+    t.index ["forumthread_id"], name: "index_comments_on_ForumThread_id"
     t.index ["User_id"], name: "index_comments_on_User_id"
   end
 
