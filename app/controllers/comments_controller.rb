@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
     #GET /Comments [Get all comments for a specific thread]
     def index
-        @Comments = Comment.where("ForumThread_id = ?", params[:forum_thread_id])
+        @Comments = Comment.where("comments.ForumThread_id = ?", params[:forum_thread_id])
         render json: @Comments
     end
 
