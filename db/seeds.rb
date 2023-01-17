@@ -88,7 +88,8 @@ Comment.create([
         content: "<p>This is a comment by another user.</p>",
         forumthread_id: 3,
         User_id: 3
-    },
+    }]);
+    Comment.create([
     {
         content: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>",
         forumthread_id: 3,
