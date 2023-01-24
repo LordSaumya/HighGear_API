@@ -14,6 +14,8 @@ class CommentsController < ApplicationController
     #POST /Comments [Create a comment]
     def create
         @comment = Comment.new(comment_params)
+        puts "params: #{params}"
+        puts "@comment: #{@comment.inspect}"
         @comment.save!
         render json: @comment
       rescue ArgumentError, ActiveRecord::RecordInvalid => err
