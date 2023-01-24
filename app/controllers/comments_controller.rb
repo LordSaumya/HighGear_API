@@ -14,14 +14,13 @@ class CommentsController < ApplicationController
     #POST /Comments [Create a comment]
     def create
         @comment = Comment.new(comment_params)
-        puts "params: #{params}"
-        puts "@comment: #{@comment.inspect}"
-        if @comment.save
-            render json: @comment
-        else
-            render error: {error: "Error in creating comment"}, status: 400
-        end
-    end
+        @comment.save!
+        render json: @comment
+      rescue ArgumentError, ActiveRecord::RecordInvalid => err
+        render error: {message: err.message }, status: 400
+      rescue => err
+        render error: {message: err.message }, status: 500
+      end
 
     #PUT /Comments/:id [Update a comment]
     def update
