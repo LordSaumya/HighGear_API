@@ -19,8 +19,10 @@ class CommentsController < ApplicationController
         @comment.save!
         render json: @comment
       rescue ArgumentError, ActiveRecord::RecordInvalid => err
+        puts "Error: #{err.message}"
         render error: {message: err.message }, status: 400
       rescue => err
+        puts "Error: #{err.message}"
         render error: {message: err.message }, status: 500
       end
 
