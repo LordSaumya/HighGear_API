@@ -1,4 +1,4 @@
 class Comment < ApplicationRecord
   belongs_to :User
-  belongs_to :Forum_Thread
+  belongs_to :ForumThread
 end
