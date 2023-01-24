@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
     #GET /Comments [Get all comments for a specific thread]
     def index
-        @Comments = Comment.where("comments.forumthread_id = ?", params[:forum_thread_id])
+        @Comments = Comment.where("forumthread_id = ?", params[:forum_thread_id])
         render json: @Comments
     end
 
@@ -14,6 +14,8 @@ class CommentsController < ApplicationController
     #POST /Comments [Create a comment]
     def create
         @comment = Comment.new(comment_params)
+        puts "params: #{params}"
+        puts "@comment: #{@comment.inspect}"
         if @comment.save
             render json: @comment
         else
